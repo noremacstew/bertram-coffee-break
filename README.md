@@ -56,6 +56,8 @@ Refreshing the page maintains the existing data.
 
 A Reset button is provided to return the system to its initial state.
 
+The interface is responsive, but not yet optimized for phones.
+
 ### Assumptions
 The names and number of the team members who participate in the Bertrand Coffee Break are fixed.
 
