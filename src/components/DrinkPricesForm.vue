@@ -53,18 +53,18 @@ const updateData = (payor) => {
 }
 
 const updateSession = () => {
-  sessionStorage.setItem('tabs', JSON.stringify(tabs.value))
-  sessionStorage.setItem('purchases', JSON.stringify(purchases.value))
-  sessionStorage.setItem('drinkPrices', JSON.stringify(drinkPrices.value))
-  sessionStorage.setItem('rounds', rounds.value)
+  localStorage.setItem('tabs', JSON.stringify(tabs.value))
+  localStorage.setItem('purchases', JSON.stringify(purchases.value))
+  localStorage.setItem('drinkPrices', JSON.stringify(drinkPrices.value))
+  localStorage.setItem('rounds', rounds.value)
 }
 
 const loadSession = () => {
-  if(!sessionStorage.getItem('rounds')) return
-  tabs.value = JSON.parse(sessionStorage.getItem('tabs'))
-  purchases.value = JSON.parse(sessionStorage.getItem('purchases'))
-  drinkPrices.value = JSON.parse(sessionStorage.getItem('drinkPrices'))
-  rounds.value = parseInt(sessionStorage.getItem('rounds'))
+  if(!localStorage.getItem('rounds')) return
+  tabs.value = JSON.parse(localStorage.getItem('tabs'))
+  purchases.value = JSON.parse(localStorage.getItem('purchases'))
+  drinkPrices.value = JSON.parse(localStorage.getItem('drinkPrices'))
+  rounds.value = parseInt(localStorage.getItem('rounds'))
 }
 
 const determineWhoPays = () => {

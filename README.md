@@ -8,7 +8,7 @@ This  project is built using Vue 3 in Vite.
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compile and Hot-Reload for Local Development
 
 ```sh
 npm run dev
@@ -26,7 +26,7 @@ I chose a very simple architecture, a Vue front-end with no backend.
 I considered using a backend API with a database, simply to showcase the capability,
 but it seemed overkill for this scope.
 
-Instead, we are using session storage to manage memory between browser sessions.
+Instead, we are using local storage to manage memory between browser sessions.
 
 ### Algorithm
 My application allows changing the price of drinks per round; while not required
@@ -57,15 +57,16 @@ Refreshing the page maintains the existing data.
 A Reset button is provided to return the system to its initial state.
 
 ### Assumptions
-The names of the employees who participate in the Bertrand Coffee Break are fixed.
+The names and number of the team members who participate in the Bertrand Coffee Break are fixed.
+
+This can be made user-editable, and allow changing who participates in each round,
+but would make the application considerably more complex, and as I was asked to only spend
+a couple hours on this project, I have chosen to leave the team members dev-configurable.
 
 The configuration can be adjusted in the DrinkPricesForm.vue file - the employee names
 are used as keys to storage objects.
 
-While the team members could be made dynamic, and allow adjusting between rounds,
-it introduces complexity for questionable merit.
-
-Due to us using session storage, the application needs to be run on the same
+Due to us using local storage, the application needs to be run on the same
 computer and the same browser each time. A more flexible memory can be attained with
 a backend file system or database that can be loaded across multiple browser sessions.
 

@@ -6,7 +6,7 @@ import {ref} from "vue";
 
 const key = ref(0)
 const clearSession = () => {
-  sessionStorage.clear()
+  localStorage.clear()
   key.value++
 }
 </script>
